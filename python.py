@@ -2,6 +2,8 @@
 
 def main():
     print("hello word")
-    a=1
+    a=14
+    b=a*2
+
 return a
 main()
