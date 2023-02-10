@@ -5,5 +5,5 @@ def main():
     a=14
     b=a*2
 
-return a
+return a,b
 main()
