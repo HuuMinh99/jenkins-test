@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo "Hello ${params.PERSON}" // chỗ này sẽ in ra console là "Hello anh Long" nếu ta truyền biến PERSON=anh Long vào
+                echo "Hello ${params.PERSON}" 
             }
         }
     }
