@@ -1,10 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('test1') {
+    stage('Install Python') {
       steps {
-        echo 'hello'
-      }
+        sh 'sudo apt-get update'
+        sh 'sudo apt-get install python3 -y'
+            }
     }
     stage('test2') {
       steps {
