@@ -1,2 +1,3 @@
 version = 1
-print("version: ",version)
+view = "version: "+str(version)
+print(view)
