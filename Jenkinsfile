@@ -1,15 +1,16 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.10.6'
-        }
-    }
-    stages {
-        stage('Build') {
-            steps {
-                sh 'python --version'
-                sh 'python test.py'
+  agent any
+  stages {
+    stage('Install Python') {
+      steps {
+        sh 'apt-get update'
+        sh 'apt-get install python3 -y'
             }
-        }
     }
+    stage('test2') {
+      steps {
+        sh 'python test.py'
+      }   
+    }
+  }
 }
