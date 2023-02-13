@@ -1,24 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('pwd1') {
-      steps {
-        sh 'pwd'
-        echo '1234'
-            }
+    agent {
+        node {
+            label 'Slave'
+        }
     }
-    stage('git clone') {
-      steps {
-        sh 'cd /var'
-        sh 'git clone https://github.com/HuuMinh99/Microservices.git'
-        echo '123456'
-        sh 'pwd'
-      }   
-     }
-     stage('Build') {
+    stages {
+        stage('Clone Repository') {
             steps {
-                sh 'mvn clean install'
+                git branch: 'master', url: 'https://github.com/HuuMinh99/Microservices.git', dir: '/home/'
             }
         }
-  }
+    }
 }
