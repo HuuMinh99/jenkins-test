@@ -1,3 +1,3 @@
-version = 1
+version = 2
 view = "version: "+str(version)
 print(view)
