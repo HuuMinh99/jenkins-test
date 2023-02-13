@@ -7,12 +7,14 @@ pipeline {
     stage('pwd1') {
       steps {
         sh 'pwd'
+        echo '1234'
             }
     }
     stage('git clone') {
       steps {
         sh 'cd /var'
         sh 'git clone https://github.com/HuuMinh99/Microservices.git'
+        echo '123456'
         sh 'pwd'
       }   
      }
