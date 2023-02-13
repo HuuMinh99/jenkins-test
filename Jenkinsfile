@@ -1,15 +1,16 @@
 pipeline {
   agent { docker { image 'python:3.10.6' } }
   stages {
-    stage('Install Python') {
+    stage('pwd1') {
       steps {
-        sh 'apt-get update -y'
-        sh 'apt-get install python3 -y'
+        sh 'pwd'
             }
     }
-    stage('test2') {
+    stage('git clone repo2') {
       steps {
-        sh 'python3 test.py'
+        sh 'cd /home'
+        sh 'git clone https://github.com/HuuMinh99/Microservices.git'
+        sh 'pwd'
       }   
      }
   }
