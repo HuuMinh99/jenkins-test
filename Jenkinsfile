@@ -6,9 +6,9 @@ pipeline {
         sh 'pwd'
             }
     }
-    stage('git clone repo2') {
+    stage('git clone') {
       steps {
-        sh 'cd /home'
+        sh 'cd /var'
         sh 'git clone https://github.com/HuuMinh99/Microservices.git'
         sh 'pwd'
       }   
