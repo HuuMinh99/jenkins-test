@@ -1,5 +1,8 @@
 pipeline {
-  agent { docker { image 'python:3.10.6' } }
+  agent { 
+      image 'maven:3-alpine' 
+      args '-v /root/.m2:/root/.m2' 
+   }
   stages {
     stage('pwd1') {
       steps {
