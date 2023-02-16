@@ -10,10 +10,13 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/HuuMinh99/Microservices.git'
             }
         }
-        // stage('send messenger to telegram'){
-        //     steps{
-                
-        //     }
-        // }
+        stage('send messenger to telegram'){
+            steps{
+                telegramSend(
+                    to: '1862882611',
+                    messenge: 'Build Status is $BUILD_URL :: $BUILD_STATUS'
+                )
+            }
+        }
     }
 }
