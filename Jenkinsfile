@@ -14,7 +14,7 @@ pipeline {
             steps{
                 telegramSend(
                     to: '-1001814180006'
-                    text: 'sdsdsds'
+                    message: 'sdsdsds'
                 )
             }
         }
