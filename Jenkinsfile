@@ -10,5 +10,10 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/HuuMinh99/Microservices.git'
             }
         }
+        stage('send messenger to telegram'){
+            steps{
+                messenge: "hello telegram"
+            }
+        }
     }
 }
