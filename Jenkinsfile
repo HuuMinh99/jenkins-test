@@ -20,11 +20,22 @@
 //         }
 //     }
 // }
-stage('Send notification') {
-  steps {
-    telegramSend(
-      to: '1862882611',
-      message: 'Build has finished'
-    )
-  }
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello'
+            }
+        }
+        stage('Send notification') {
+            steps {
+                telegramSend(
+                    to: '1862882611',
+                    message: 'Build has finished'
+                )
+            }
+        }
+    }
 }
