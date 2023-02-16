@@ -14,7 +14,7 @@ pipeline {
             steps{
                 telegramSend(
                     to: '35702912',
-                    messenge: 'Build Status is $BUILD_URL :: $BUILD_STATUS'
+                    messenge: 'sdsdsds'
                 )
             }
         }
