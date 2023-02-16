@@ -32,7 +32,7 @@ pipeline {
         stage('Send notification') {
             steps {
                 telegramSend(
-                    to: 'MinhTHc_bot',
+                    to: '5952008889',
                     message: 'Build has finished'
                 )
             }
