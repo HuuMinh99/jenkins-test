@@ -22,20 +22,19 @@
 // }
 pipeline {
     agent any
-
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello'
             }
         }
-        stage('Send notification') {
-            steps {
-                telegramSend(
-                    to: '5952008889',
-                    message: 'Build has finished'
-                )
-            }
-        }
+        // stage('Send notification') {
+        //     steps {
+        //         telegramSend(
+        //             to: '5952008889',
+        //             message: 'Build has finished'
+        //         )
+        //     }
+        // }
     }
 }
