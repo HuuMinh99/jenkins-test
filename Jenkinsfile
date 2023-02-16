@@ -13,8 +13,8 @@ pipeline {
         stage('send messenger to telegram'){
             steps{
                 telegramSend(
-                    chat_id: '-1001814180006'
-                    text: '123'
+                    to: '-1001814180006'
+                    messages: '123'
                 )
             }
         }
