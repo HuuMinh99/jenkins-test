@@ -13,7 +13,7 @@ pipeline {
         stage('send messenger to telegram'){
             steps{
                 telegramSend(
-                    to: '1862882611',
+                    to: '-1001814180006',
                     messenge: 'sdsdsds'
                 )
             }
